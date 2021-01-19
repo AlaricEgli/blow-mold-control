@@ -430,10 +430,10 @@ currentMillis = millis();
 //END OF PROGRAM RUN 
 
                   
-// THIS CODE WILL TURN ON THE RELAYS AUTOMATICALLY (AND THEREFORE THE MACHINE. CAUTION AHEAD)
-// THIS CODE WILL TURN ON THE RELAYS AUTOMATICALLY (AND THEREFORE THE MACHINE. CAUTION AHEAD)
-// THIS CODE WILL TURN ON THE RELAYS AUTOMATICALLY (AND THEREFORE THE MACHINE. CAUTION AHEAD)
-// THIS CODE WILL TURN ON THE RELAYS AUTOMATICALLY (AND THEREFORE THE MACHINE. CAUTION AHEAD)
+// WELCOME TO THE DANGER ZONE. THIS AREA WILL TURN ON THE RELAYS ALL WILLY NILLY
+// WELCOME TO THE DANGER ZONE. THIS AREA WILL TURN ON THE RELAYS ALL WILLY NILLY
+// WELCOME TO THE DANGER ZONE. THIS AREA WILL TURN ON THE RELAYS ALL WILLY NILLY
+// WELCOME TO THE DANGER ZONE. THIS AREA WILL TURN ON THE RELAYS ALL WILLY NILLY
 
                        
                   if (currentMillis >= startMillis && screw_pos >= screw_fwd_pos && cycle_start==1 ) {
@@ -443,14 +443,12 @@ currentMillis = millis();
                     digitalWrite(y_valve_relay, LOW);
                     //lcd2.setCursor(12,3); 
                     //lcd2.print ("CLAMP CL");//prints clamp close relay status to LCD
-                    Serial.print("I'm turning on the shot forward and Y valve relay now");
-                    Serial.println();
+                    Serial.println("I'm turning on the shot forward and Y valve relay now");
                   }
 
 
                   if (screw_pos <= screw_fwd_pos +10 && screw_pos >= screw_fwd_pos - 10 && cycle_start == 1) {
-                      Serial.print("WE'VE DONE IT BOYS THE SCREW HAS MADE IT");
-                      Serial.println();
+                      Serial.println("WE'VE DONE IT BOYS THE SCREW HAS MADE IT");
                       Serial.print(screw_pos);
                       Serial.println();
                       digitalWrite(ledPin, HIGH);
@@ -516,10 +514,8 @@ currentMillis = millis();
                   }
 
                   if (screw_pos >= screw_return_pos && screw_complete == 1) {
-                    Serial.print("THE EAGLE SCREW HAS LANDED");
-                    Serial.println();
-                    Serial.print(screw_pos);
-                    Serial.println();
+                    Serial.println("THE EAGLE SCREW HAS LANDED");
+                    Serial.println(screw_pos);
                     digitalWrite(screw_rev_relay, HIGH);
                     digitalWrite(g_valve_relay, HIGH);
                     screw_complete = 0; 
@@ -533,8 +529,7 @@ currentMillis = millis();
                     digitalWrite(y_valve_relay, LOW);
                     //lcd2.setCursor(12,3); 
                     //lcd2.print ("CLAMP CL");//prints clamp close relay status to LCD
-                    Serial.print("I'm turning on the clamp close relay and Y valve relay now");
-                    Serial.println();
+                    Serial.println("I'm turning on the clamp close relay and Y valve relay now");
                   }
                     else {
                       digitalWrite(clamp_close_relay, HIGH);
@@ -546,8 +541,7 @@ currentMillis = millis();
                     digitalWrite(air_on_relay, LOW);
                     //lcd2.setCursor(12,3); 
                     //lcd2.print ("AIR ON  ");//air relay status to LCD
-                    Serial.print("I'm turning on the air relay now");
-                    Serial.println();
+                    Serial.println("I'm turning on the air relay now");
                       }
                         else {
                           digitalWrite(air_on_relay, HIGH);
@@ -562,8 +556,7 @@ currentMillis = millis();
                     cycle_start2 = 0;
                     //lcd2.setCursor(12,3); 
                     //lcd2.print ("CLAMP OP");//prints the clamp open relay status to LCD
-                    Serial.print("I'm turning on the clamp open and Y valve relay now");
-                    Serial.println();
+                    Serial.println("I'm turning on the clamp open and Y valve relay now");
                       }
                         else {
                            digitalWrite(clamp_open_relay, HIGH);                                          
@@ -571,19 +564,16 @@ currentMillis = millis();
 
                   if (currentMillis >= y_valve_tte2 && currentMillis <= y_valve_tte2+100) {
                     digitalWrite(y_valve_relay, HIGH);
-                    Serial.print("I'm turning off the y valve relay now");
-                    Serial.println();
+                    Serial.println("I'm turning off the y valve relay now");
                   }
                   if (currentMillis >= g_valve_tte1 && currentMillis <= g_valve_tts2) {
                     digitalWrite(g_valve_relay, HIGH);
-                    Serial.print("I'm turning off the G valve relay now");
-                    Serial.println();
+                    Serial.println("I'm turning off the G valve relay now");
                   }
 
                   if (currentMillis >= g_valve_tte2 && currentMillis <= g_valve_tte2) {
                     digitalWrite(g_valve_relay, HIGH);
-                    Serial.print("I'm turning off the G valve relay now");
-                    Serial.println();
+                    Serial.println("I'm turning off the G valve relay now");
                   }
                   if (currentMillis >= clamp_open_tte+100 && cycle_start2 == 0) {
                     digitalWrite(clamp_close_relay, HIGH);
@@ -593,16 +583,15 @@ currentMillis = millis();
                     digitalWrite(screw_rev_relay, HIGH);
                     digitalWrite(g_valve_relay, HIGH);
                     digitalWrite(y_valve_relay, HIGH);    
-                    Serial.print("I'VE TURNED OFF ALL THE RELAYS. PRAY I DO NOT FURTHER TURN THEM OFF");
-                    Serial.println();              
+                    Serial.println("I'VE TURNED OFF ALL THE RELAYS. PRAY I DO NOT FURTHER TURN THEM OFF");                               
                   }
                   
                     
 
-// END OF CODE THAT WILL TURN ON THE RELAYS
-// END OF CODE THAT WILL TURN ON THE RELAYS
-// END OF CODE THAT WILL TURN ON THE RELAYS
-// END OF CODE THAT WILL TURN ON THE RELAYS
+// GOOD JOB TOM CRUISE YOU MADE IT OUT OF THE DANGER ZONE
+// GOOD JOB TOM CRUISE YOU MADE IT OUT OF THE DANGER ZONE
+// GOOD JOB TOM CRUISE YOU MADE IT OUT OF THE DANGER ZONE
+// GOOD JOB TOM CRUISE YOU MADE IT OUT OF THE DANGER ZONE
 
 // WRITING VARIABLES TO THE DISPLAY
             // WRITE VARIABLES TO DISPLAY 1
